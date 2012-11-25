@@ -5,7 +5,7 @@
 
 -export([handle_cgi_req/3]).
 
--include("couch_db.hrl").
+-include_lib("couch/include/couch_db.hrl").
 
 handle_cgi_req(Req, Db, DDoc)
     -> ?LOG_DEBUG("CGI request: ~p", [Req#httpd.path_parts])
